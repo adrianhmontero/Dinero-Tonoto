@@ -9,7 +9,7 @@ function ScreenTitle({ title }: Props) {
 
   return (
     <View style={styles.container}>
-      <Text style={[styles.title, { color: isDarkMode ? '#fff' : '#000' }]}>
+      <Text style={[styles.title, isDarkMode ? styles.dark : styles.light]}>
         {title}
       </Text>
     </View>
@@ -25,6 +25,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: '600',
+  },
+  dark: {
+    color: '#fff',
+  },
+  light: {
+    color: '#000',
   },
 });
 
